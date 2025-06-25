@@ -2,12 +2,13 @@ const express = require("express");
 const app = express();
 const { exec, execSync } = require('child_process');
 const port = process.env.SERVER_PORT || process.env.PORT || 3000;        
-const UUID = process.env.UUID || '9fdd3f2e-72c9-463b-840d-e01456f5b29a'; //若需要改UUID，需要在config.json里改为一致
+const UUID = process.env.UUID || 'd1ea6506-ab94-4d55-9250-144e0c04a0e4'; //若需要改UUID，需要在config.json里改为一致
 const NEZHA_SERVER = process.env.NEZHA_SERVER || 'nezha.abc.ac';     
 const NEZHA_PORT = process.env.NEZHA_PORT || '';                     // 哪吒端口为{443,8443,2096,2087,2083,2053}其中之一开启tls
 const NEZHA_KEY = process.env.NEZHA_KEY || '';
-const ARGO_DOMAIN = process.env.ARGO_DOMAIN || 'choreo240901.juesi.eu.org';     // 建议使用token，argo端口8080，cf后台设置需对应,使用json需上传json和yml文件至files目录
-const ARGO_AUTH = process.env.ARGO_AUTH || '{"AccountTag":"8296b473f2873c30e207ed4dce084111","TunnelSecret":"ghWSr9fyzKl07t6Zu1VnFtXlQuZzn1A2p4OURue1lNE=","TunnelID":"f928e9ed-6b68-41e2-b525-29243024d691"}';
+const ARGO_DOMAIN = process.env.ARGO_DOMAIN || 'choreo.sixiso.eu.org';     // 建议使用token，argo端口8080，cf后台设置需对应,使用json需上传json和yml文件至files目录
+const ARGO_AUTH = process.env.ARGO_AUTH || 'eyJhIjoiZGFjYmMzMDVmM2ViOWZmYTUwNDk3ZjRiNGIwMDAzOWMiLCJ0IjoiZjY5MTBlMGYtZmUzOC00ZGM3LWExNTgtY2VmZjgxOWFlN2U3IiwicyI6Ill6ZGhaamxpWkdZdFpXSmxZaTAwTmpNd0xUZzVaVEl0WW1VNE16YzVOak0wT0RSaSJ9
+';
 const CFIP = process.env.CFIP || 'government.se';
 const NAME = process.env.NAME || 'Choreo';
 
